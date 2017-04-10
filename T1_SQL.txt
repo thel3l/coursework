@@ -1,23 +1,25 @@
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
-11.
-12.
-13.
-14.
-15.
-16.
-17.
-18.
-19.
-20.
+1.  create TABLE SALESMAN (city,salesman_name,salesman_code,commission);
+2. SELECT salesman_code FROM ORDERS;
+3. SELECT * FROM CUSTOMERS WHERE rating > 100;
+4. SELECT * FROM <table> WHERE amt IS NOT NULL, amt NOT = 0;
+5. SELECT unique(count(*)) FROM SALES GROUP by ename;
+6. SELECT count(employees) FROM <table> GROUP by DEPARTMENT;
+7. SELECT name FROM Employees WHERE name like "H";
+8. ALTER SALARY ADD Total_Sal;
+9. Insert into SALARY(Total_Sal); values(...);
+10. SELECT empno,name,salary FROM <table> WHERE hobby = 'sports';
+11. select name from employees where age=max(age);
+12. select count(*) from employees group by area;
+13. select name from employees where age < avg(age) group by native_place;
+14. select s_no, hobby, salary from Employees sort by salary desc;
+15. select hobbies from Employees where name like '%abhay%';
+16. select appointment_date, native_place from Employees where name like "A%" or like "%d";
+17. select @total_payout := sum(salary) where date_of_retirement="2006-01-20";
+    create view [Salary Payout] as select @total_payout from employees;
+    select * from [Salary Payout];
+18. select (salary+salary*0.1) from employees where hobby="Sports";
+19. select count(*) from employees where datediff(currentdate(), date_of_joining) > (interval (20*365) day);
+20. select name, date_of_birth from employees where datediff(currentdate(), date_of_joining) > (interval (17*365));
 21. select name from employees where salary > in (select salary from employees where department="Sales");
 22. update employees (set salary=(salary+0.05*salary) where hobby="music" or (salary.currentdate()-date_of_joining) > (interval (365*2) day);
 23. insert into employees(hobby) values ("music");
@@ -91,6 +93,3 @@ WHERE PRICE IN (8,15)
 76. SELECT CONSUMERNAME, ADDRESS,COMPANY,PRICE,S_ID FROM CONSUMERS,STATIONERY
 77. UPDATE Stationery
 SET PRICE = PRICE + 2
-78.
-79.
-80.
