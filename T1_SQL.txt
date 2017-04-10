@@ -47,49 +47,27 @@
 40. update Store(
         set price=price+1000);
 41. select * from senders where city = "Mumbai";
-42. SELECT RECId, SenderName, SenderAddress, RecName, Rec,Address
-FROM <table>
-43. SELECT * FROM  <table>
-ORDERER by RecName ASC
-44. SELECT COUNT(*) FROM <table>
-GROUP by city
-45. SELECT * FROM tab
-ORDER by DOB DSC
-46. SELECT Name,Desig FROM <table>
-WHERE Plevel = 'P001' or 'P002'
-47. SELECT * FROM <table>
-WHERE Dob IN(84-01-19, 87-01-18)
-48. INsert INto <table>;
-values(19,'Daya Kishore','Operator','P003',08-01-19,84-07-11)
-61. SELECT FL_NO,FAREFN FROM FLIGHTS,FARES
-WHERE FAREFN = FARE + FARE*TAX
-62. SELECT Firstname,Lastname,Address,City FROM Employees
-WHERE city ='Paris'
-63. SELECT * FROM Employees
-ORDERer by Firstname, DSC
-64. SELECT Firstname, Lastname, Totalsal FROM Employees
-WHERE desig ='Manager' AND Totalsal = Salary + Benefits
-65. SELECT MAX(salary) FROM Empsalary
-WHERE desig = 'Manager' or 'Clerk'
-66. SELECT GCODE,DESCRIPTION FROM <table>
-WHERE type ='GARMENT'
-ORDERER by GCODE DSC
-67. SELECT * FROM <table>
-shere READYMADE IN (08-12-07,16-06-08)
-68. SELECT avg(PRICE) FROM <table>
-WHERE material = 'fabric', FCODE = 'F03'
+42. SELECT RECId, SenderName, SenderAddress, RecName, Rec,Address FROM <table>;
+43. SELECT * FROM  <table> ORDER by RecName ASC;
+44. SELECT COUNT(*) FROM <table> GROUP by city;
+45. SELECT * FROM tab ORDER by DOB DESC;
+46. SELECT Name,Desig FROM <table> WHERE Plevel = 'P001' or 'P002';
+47. SELECT * FROM <table> WHERE Dob IN(84-01-19, 87-01-18);
+48. INsert INto <table>; values(19,'Daya Kishore','Operator','P003',08-01-19,84-07-11);
+61. SELECT FL_NO,FAREFN FROM FLIGHTS,FARES WHERE FAREFN = FARE + FARE*TAX;
+62. SELECT Firstname,Lastname,Address,City FROM Employees WHERE city ='Paris';
+63. SELECT * FROM Employees ORDER by Firstname, DESC;
+64. SELECT Firstname, Lastname, Totalsal FROM Employees WHERE desig ='Manager' AND Totalsal = Salary + Benefits;
+65. SELECT MAX(salary) FROM Empsalary WHERE desig = 'Manager' or 'Clerk';
+66. SELECT GCODE,DESCRIPTION FROM <table> WHERE type ='GARMENT' ORDER by GCODE DESC;
+67. SELECT * FROM <table> shere READYMADE IN (08-12-07,16-06-08);
+68. SELECT avg(PRICE) FROM <table> WHERE material = 'fabric', FCODE = 'F03';
 69. SELECT MAX(FABRIC),MIN(GARMENT) FROM GARMENTS
-70. SELECT DCODE,DESCRIPTION FROM <table>
-ORDER by DCODE DSC
-71. SELECT * FROM <table>
-WHERE LAUNCHDATE IN (05-12-07, 20-06-08)
-72. SELECT avg(PRICE) FROM <table>
-WHERE MCODE = 'M003'
+70. SELECT DCODE,DESCRIPTION FROM <table> ORDER by DCODE DESC;
+71. SELECT * FROM <table> WHERE LAUNCHDATE IN (05-12-07, 20-06-08);
+72. SELECT avg(PRICE) FROM <table> WHERE MCODE = 'M003';
 73. SELECT MAX(PRICE),MIN(PRICE) FROM DRESS
-74. SELECT * FROM Consumers
-WHERE ADDRESS = 'Delhi'
-75.SELECT * FROM Stationery
-WHERE PRICE IN (8,15)
+74. SELECT * FROM Consumers WHERE ADDRESS = 'Delhi';
+75.SELECT * FROM Stationery WHERE PRICE IN (8,15);
 76. SELECT CONSUMERNAME, ADDRESS,COMPANY,PRICE,S_ID FROM CONSUMERS,STATIONERY
-77. UPDATE Stationery
-SET PRICE = PRICE + 2
+77. UPDATE Stationery SET PRICE = PRICE + 2;
