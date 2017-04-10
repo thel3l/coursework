@@ -1,0 +1,96 @@
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+15.
+16.
+17.
+18.
+19.
+20.
+21. select name from employees where salary > in (select salary from employees where department="Sales");
+22. update employees (set salary=(salary+0.05*salary) where hobby="music" or (salary.currentdate()-date_of_joining) > (interval (365*2) day);
+23. insert into employees(hobby) values ("music");
+24. alter table job(
+        add(email varchar(40)));
+25. create table employees(
+        empno integer,
+        name varchar(40),
+        hobby varchar(40));
+26. create view temporary as select personal_details, job_description from employees where datediff(getdate(),date_of_joining) < (interval (16*365) day);
+27. delete * from job where hobby NOT = "sports";
+28. drop table personal;
+29. select firstname, lastname, address, city from employees where city="Paris";
+30. select * from employees sort by firstname DESC;
+31. select @total_salary := (benefits from empSalary + base from empSalary); 
+    select (firstname, lastname, @total_salary) from employees, empSalary; 
+32. select max(salary) from empSalary where job="manager" or job="clerk";
+33. select * from store sort by lastbuy asc;
+34. select itemno, name from Store where rate > 15;
+35. select * from store where scode="22" or quantity > 110;
+36. select min(rate) from store group by supplier;
+37. select * from customers where city="Delhi";
+38. select details from Store where price between (35000 and 55000);
+39. select CustomerName, City, I_ID from Customer, Itemname UNION select price from Item where Item.I_ID = Itemname.I_ID;
+40. update Store(
+        set price=price+1000);
+41. select * from senders where city = "Mumbai";
+42. SELECT RECId, SenderName, SenderAddress, RecName, Rec,Address
+FROM <table>
+43. SELECT * FROM  <table>
+ORDERER by RecName ASC
+44. SELECT COUNT(*) FROM <table>
+GROUP by city
+45. SELECT * FROM tab
+ORDER by DOB DSC
+46. SELECT Name,Desig FROM <table>
+WHERE Plevel = 'P001' or 'P002'
+47. SELECT * FROM <table>
+WHERE Dob IN(84-01-19, 87-01-18)
+48. INsert INto <table>;
+values(19,'Daya Kishore','Operator','P003',08-01-19,84-07-11)
+61. SELECT FL_NO,FAREFN FROM FLIGHTS,FARES
+WHERE FAREFN = FARE + FARE*TAX
+62. SELECT Firstname,Lastname,Address,City FROM Employees
+WHERE city ='Paris'
+63. SELECT * FROM Employees
+ORDERer by Firstname, DSC
+64. SELECT Firstname, Lastname, Totalsal FROM Employees
+WHERE desig ='Manager' AND Totalsal = Salary + Benefits
+65. SELECT MAX(salary) FROM Empsalary
+WHERE desig = 'Manager' or 'Clerk'
+66. SELECT GCODE,DESCRIPTION FROM <table>
+WHERE type ='GARMENT'
+ORDERER by GCODE DSC
+67. SELECT * FROM <table>
+shere READYMADE IN (08-12-07,16-06-08)
+68. SELECT avg(PRICE) FROM <table>
+WHERE material = 'fabric', FCODE = 'F03'
+69. SELECT MAX(FABRIC),MIN(GARMENT) FROM GARMENTS
+70. SELECT DCODE,DESCRIPTION FROM <table>
+ORDER by DCODE DSC
+71. SELECT * FROM <table>
+WHERE LAUNCHDATE IN (05-12-07, 20-06-08)
+72. SELECT avg(PRICE) FROM <table>
+WHERE MCODE = 'M003'
+73. SELECT MAX(PRICE),MIN(PRICE) FROM DRESS
+74. SELECT * FROM Consumers
+WHERE ADDRESS = 'Delhi'
+75.SELECT * FROM Stationery
+WHERE PRICE IN (8,15)
+76. SELECT CONSUMERNAME, ADDRESS,COMPANY,PRICE,S_ID FROM CONSUMERS,STATIONERY
+77. UPDATE Stationery
+SET PRICE = PRICE + 2
+78.
+79.
+80.
