@@ -1,3 +1,5 @@
+import math
+
 n=int(raw_input("Enter number of terms: "))
 x_val = int(raw_input("Enter the value of x: "))
 d=0  #to sum all terms, initial value is 0
@@ -13,4 +15,7 @@ while n>0:
      xIntermediate = (x_val ** n) * x
      d=d+xIntermediate #adding to final sum
 
+infSum = ((-x_val+pow(math.e, x_val)-1)/x_val)
+
 print "The sum is ",d #printing
+print "The infinite sum is", infSum
