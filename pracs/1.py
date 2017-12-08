@@ -6,14 +6,17 @@ class R:
     def __init__(self, p, q):
         self.p = p
         self.q = q
+        self.__div__ = self.div
+        self.__trueDiv__ = self.div
+        self.__floorDiv__ = self.div
+    def div(self, R2):
+        return R(self.p*R2.q, self.q*R2.p)
     def __add__(self, R2):
         return R((self.p*R2.q + R2.p*self.q), self.q * R2.q)        
     def __sub__(self, R2):
         return R((self.p*R2.q - R2.p*self.q), self.q * R2.q)
     def __mul__(self, R2):
         return R(self.p*R2.p, self.q*R2.q)
-    def __truediv__(self, R2):
-        return R(self.p*R2.q, self.q*R2.p)
     def __str__(self):
         return str(self.p) + '/' + str(self.q)
     def __repr__(self):
