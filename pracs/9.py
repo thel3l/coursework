@@ -24,11 +24,8 @@ def doBinarySearch():
     print("Index of item: " + str(index))
 
 def menu():
-    functs = {
-        1: doLinearSearch,
-        2: doBinarySearch
-    }
+    functs = [doLinearSearch, doBinarySearch]
     print '1. Linear Search\n2. Binary Search'
-    functs[i("Do something: ")]()
+    functs[i("Do something: ")-1]()
     
 menu()
