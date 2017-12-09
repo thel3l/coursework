@@ -1,3 +1,5 @@
+i = input
+
 def linearSearch(target, numbers):
     for i in range(len(numbers)):
         if numbers[i]==target:
@@ -12,3 +14,21 @@ def binarySearch(sortedList, item, start=None, end=None):
     if(item == sortedList[midpoint]): return(midpoint)
     elif(item > sortedList[midpoint]): return(binarySearch(sortedList, item, midpoint+1, end))
     elif(item < sortedList[midpoint]): return(binarySearch(sortedList, item, start, midpoint-1))
+
+def doLinearSearch():
+    index = linearSearch(i("Enter list: "), i("Enter target: "))
+    print("Index of item: " + str(index))
+
+def doBinarySearch():
+    index = binarySearch(i("Enter sorted list: "), i("Enter target: "))
+    print("Index of item: " + str(index))
+
+def menu():
+    functs = {
+        1: doLinearSearch,
+        2: doBinarySearch
+    }
+    print '1. Linear Search\n2. Binary Search'
+    functs[i("Do something: ")]()
+    
+menu()
