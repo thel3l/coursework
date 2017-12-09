@@ -43,13 +43,8 @@ def divide():
     print R1 / R2
 
 def menu():
-    functs = {
-        1: add,
-        2: subtract,
-        3: multiply,
-        4: divide
-    }
+    functs = [add, subtract, multiply, divide]
     print '1. Add\n2. Subtract\n3. Multiply\n4. Divide'
-    functs[i("Do something: ")]()
+    functs[i("Do something: ")-1]()
     
 menu()
