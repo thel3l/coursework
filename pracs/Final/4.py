@@ -1,16 +1,30 @@
 class ITEMINFO:
-    def __init__(self, ICode, Item, Price, Qty, Discount):
-        self.ICode = ICode
-        self.Item = Item
-        self.Price = Price
-        self.Qty = Qty
-        self.Discount = Discount
-        # self.Netprice =
+    def __init__(self):
+        self.ICode = 0
+        self.Item = " "
+        self.Price = 0
+        self.Qty = 0
+        self.Discount = 0
+        self.Netprice = 0
     def FindDisc(self):
-        pass;
-    
+        if(self.Qty<=10):
+            self.Discount = 0
+            return
+        if(self.Qty<=20):
+            self.Discount = 15
+            return
+        self.Discount = 20
     def Buy(self):
-        pass;
-    
+        i = input
+        self.ICode = i('Enter ICode')
+        self.Item = i('Enter Item')
+        self.Price = i('Enter Price')
+        self.Qty = i('Enter Qty')
     def ShowAll(self):
-        pass;
+        print {
+            "ICode": self.ICode,
+            "Item": self.Item,
+            "Price": self.Price,
+            "Qty": self.Qty,
+            "Discount": self.Discount
+        }
